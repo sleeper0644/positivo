@@ -262,4 +262,25 @@ h4 {
   --input-height: 59px;
   --button-height:68px;
   --transition-duration: 0.2s ;
+}
+
+.header {
+  padding-top: 60px;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.header__menu {
+  margin-left: auto;
+  font-size: 20px;
+}
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }/*# sourceMappingURL=styles.css.map */
