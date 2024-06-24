@@ -18,14 +18,14 @@
     border: none;
 }
 
-@mixin flex-center ($IsInline:false) {
+@mixin flex-center ($IsInline: false) {
     @if $IsInline {
         display: inline-flex;
     } @else {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }  
+    }
+    justify-content: center;
+    align-items: center;  
 }
 
 @mixin ABS-center {
