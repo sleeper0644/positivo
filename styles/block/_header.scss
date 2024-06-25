@@ -1,21 +1,56 @@
 .header {
     padding-top: 60px;
 
+    @include desktop {
+        padding-top: 30px;
+    }
+        
+    @include mobile {
+        padding-top: 15px;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         column-gap: 40px;
+
+        @include desktop {
+            column-gap: 20px;
+        }
+
+    }
+
+    
+    &__logo {
+        @include mobile {
+            max-width: 144px;
+        }
     }
 
     &__menu {
         margin-left: auto;
         font-size: 20px;
 
+        @include desktop {
+            
+            font-size: 18px;
+           
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
+
         &-list {
             display: flex;
             align-items: center;
             column-gap: 40px;
+
+            @include desktop {
+                
+                column-gap: 20px;
+            }
         }
 
         &-link {
@@ -42,5 +77,10 @@
 
             }
         }
+    }
+    &__button {
+        height: 48px;
+        padding-inline: 18px;
+        font-size: 16px;
     }
 }

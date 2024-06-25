@@ -303,8 +303,63 @@ h4 {
   background-color: transparent;
 }
 
+.burger-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  aspect-ratio: 1;
+  position: relative;
+}
+@media (hover: hover) {
+  .burger-button:hover {
+    background-color: var(--color-acent);
+    border-radius: var(--border-radius-small);
+    -webkit-border-radius: var(--border-radius-small);
+    -moz-border-radius: var(--border-radius-small);
+    -ms-border-radius: var(--border-radius-small);
+    -o-border-radius: var(--border-radius-small);
+  }
+}
+@media (hover: none) {
+  .burger-button:active {
+    background-color: var(--color-acent);
+    border-radius: var(--border-radius-small);
+    -webkit-border-radius: var(--border-radius-small);
+    -moz-border-radius: var(--border-radius-small);
+    -ms-border-radius: var(--border-radius-small);
+    -o-border-radius: var(--border-radius-small);
+  }
+}
+.burger-button::after {
+  position: absolute;
+  top: 50%;
+  left: 50;
+  translate: -50% -50%;
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: var(--color-dark);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 -8px, 0 8px;
+}
+
 .header {
   padding-top: 60px;
+}
+@media (max-width: 1280px) {
+  .header {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding-top: 15px;
+  }
 }
 .header__inner {
   display: flex;
@@ -313,15 +368,42 @@ h4 {
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
+@media (max-width: 1280px) {
+  .header__inner {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .header__logo {
+    max-width: 144px;
+  }
+}
 .header__menu {
   margin-left: auto;
   font-size: 20px;
+}
+@media (max-width: 1280px) {
+  .header__menu {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .header__menu {
+    font-size: 16px;
+  }
 }
 .header__menu-list {
   display: flex;
   align-items: center;
   -moz-column-gap: 40px;
        column-gap: 40px;
+}
+@media (max-width: 1280px) {
+  .header__menu-list {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
 }
 .header__menu-link {
   position: relative;
@@ -349,4 +431,9 @@ h4 {
   height: 2px;
   background-color: currentColor;
   transition-duration: inherit; /*длительность анимации .2с*/
+}
+.header__button {
+  height: 48px;
+  padding-inline: 18px;
+  font-size: 16px;
 }/*# sourceMappingURL=styles.css.map */
