@@ -10,9 +10,12 @@
     <header>
         <div class="header">
             <div class="header__inner container">
-                <a href="/" class="header__logo kogo">
-                    <img src="./images/header/logo.svg" alt="Positivus" width="220" height="36" loading="lazy">
-                </a>
+                <div class="header__logo-container">
+                    <a href="/" class="header__logo logo">
+                        <img src="./images/header/logo.svg" alt="Positivus" width="220" height="36" loading="lazy">
+                    </a>
+                </div>
+                
                 <nav class="header__menu hidden-mobile">
                     <ul class="header__menu-list">
                         <li class="header__menu-item">
@@ -40,6 +43,81 @@
             </div>
         </div>
     </header>
+    <main class="content">
+        <section class="section container">
+            <div class="section__body">
+                <div class="hero">
+                    <div class="hero__main">
+                        <div class="hero__body">
+                            <h1 class="hero__title">Navigating the digital landscape for success</h1>
+                            <div class="hero__description">
+                                <p>
+                                    Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
+                                </p>
+                            </div> 
+                            <button class="hero__button button">Book a consultation</button>
+                        </div>
+                        <img class="hero__image" src="./images/header/hero-bg.svg" width="600" height="515" loading="lazy" alt="" class="hero__img">
+                    </div>
+                    <div class="hero__partners">
+                        <ul class="hero__partners-list">
+                            <h2 class="visually-hidden">Our partners</h2>
+                            <li class="hero__partners-item">
+                                <img class="hero__partners-image" src="./images/header/partner/amazon.svg" loading="lazy" width="130" height="48" alt="" class="hero__partner-img">
+                            </li>
+                            <li class="hero__partners-item">
+                                <img class="hero__partners-image" src="./images/header/partner/dribbble.svg" loading="lazy" alt="" class="hero__partner-img">
+                            </li>
+                            <li class="hero__partners-item">
+                                <img class="hero__partners-image" src="./images/header/partner/hub.svg" loading="lazy" width="130" height="48" alt="" class="hero__partner-img">
+                            </li>
+                            <li class="hero__partners-item">
+                                <img class="hero__partners-image" src="./images/header/partner/notion.svg" loading="lazy" width="130" height="48" alt="" class="hero__partner-img">
+                            </li>
+                            <li class="hero__partners-item">
+                                <img class="hero__partners-image" src="./images/header/partner/netflix.svg" loading="lazy" width="130" height="48" alt="" class="hero__partner-img">
+                            </li>
+                            <li class="hero__partners-item">
+                                <img class="hero__partners-image" src="./images/header/partner/zoom.svg" loading="lazy" width="130" height="48" alt="" class="hero__partner-img">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section container">
+            <header class="section__header">
+                <h2 class="section__title puddle-bg">Services</h2>
+                <div class="section__description">
+                    <p>
+                        At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
+                    </p>
+                </div>
+            </header>
+            <div class="section__body">
+                <div class="services">
+                    <ul class="services__list">
+                        <li class="services__item">
+                            <article class="services-card">
+                                <div class="service-card__body">
+                                    <h3 class="service-card__title">
+                                        <span class="puddle-bg">Search engine</span>
+                                        <span class="puddle-bg">optimization</span>
+                                    </h3>
+                                    <a href="" class="service-card__link">
+                                        <span class="service-card__link-icon-wrapper"></span>
+                                        <span class="service-card__link-label">Learn more</span>
+                                    </a>
+                                </div>
+                                <img src="" alt="" class="service__card-img">
+                            </article>
+                        </li>
+                    </ul>
+                    <div class="services__banner banner"></div>
+                </div>
+            </div>
+        </section>
+    </main>
     <dialog class="mobile-overlay visible-mobile" id="mobileOverlay" >
         <form class="mobile-overlay__close-button-wrapper" metod="dialog">
             <button class="mobile-overlay__close-button cross-button" type="submit">

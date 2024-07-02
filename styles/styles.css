@@ -261,7 +261,13 @@ h4 {
   --section-padding-y:70px;
   --input-height: 59px;
   --button-height:68px;
-  --transition-duration: 0.2s ;
+  --transition-duration: 0.2s
+  @include desktop {
+      --section-padding-y: 50px;
+  }
+  @include mobile {
+      --section-padding-y: 30px;
+  } ;
 }
 
 .button {
@@ -496,4 +502,107 @@ h4 {
   flex-direction: column;
   row-gap: 30px;
   min-height: 80vh;
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--section-padding-y);
+}
+@media (max-width: 1280px) {
+  .hero {
+    row-gap: 60px;
+  }
+}
+.hero__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media (max-width: 767px) {
+  .hero__main {
+    flex-direction: column;
+  }
+}
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 35px;
+  max-width: 531px;
+}
+@media (max-width: 767px) {
+  .hero__body {
+    display: contents;
+  }
+}
+@media (max-width: 767px) {
+  .hero__title {
+    order: -2;
+    margin-bottom: 10px;
+  }
+}
+.hero__description {
+  font-size: 20px;
+  line-height: 1.4;
+}
+@media (max-width: 767px) {
+  .hero__description {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__button {
+    width: 100%;
+    max-width: 390px;
+    margin-inline: auto;
+  }
+}
+.hero__partners-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 37px;
+       column-gap: 37px;
+}
+@media (max-width: 1023px) {
+  .hero__partners-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .hero__partners-list {
+    --heroPartnersWidthOffsetX: 60px;
+    width: calc(100vw + var(--heroPartnersWidthOffsetX2) * 2);
+  }
+}
+@media (max-width: 1023px) {
+  .hero__partners-item {
+    display: flex;
+    justify-content: center;
+  }
+}
+.hero__partners-image {
+  filter: grayscale(1);
+}
+@media (max-width: 1023px) {
+  .hero__image {
+    max-width: 40%;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .hero__image {
+    order: -1;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=styles.css.map */
