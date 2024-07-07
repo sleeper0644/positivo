@@ -72,6 +72,8 @@
             @include mobile-s {
                 --heroPartnersWidthOffsetX: 60px;
                 width: calc(100vw + var(--heroPartnersWidthOffsetX2)*2);
+
+                margin-left: calc((var(--heroPartnersWidthOffsetX) + var(--container-padding-X)) * -1);
             }
 
         }

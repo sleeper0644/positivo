@@ -1,10 +1,10 @@
 :root {
     --color-dark:    #191A23;
     --color-dark-alt:#292A32;
-    --color-gray:   #666666;
+    --color-gray:   #f3f3f3;
     --color-gray-alt:#898989;
     --color-acent:   #b9ff66;
-    --color-light:    #f3f3f3;
+    --color-light:    #ffffff;
     
 
     --border: 1px solid var(--color-dark);
@@ -12,7 +12,7 @@
     --border-radius-small: 7px;
     --border-radius-large: 45px;
 
-    --shadow: 0 5px 0 0 var(var(--color-dark));
+    --shadow: 0 5px 0 0 var(--color-dark);
 
     --font-famiy-base: 'Space Grotesk', sans-serif;
 

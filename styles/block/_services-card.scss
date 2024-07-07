@@ -1,0 +1,104 @@
+.services-card {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    min-height: 310px;
+    padding: 50px;
+    background-color: var(--color-light);
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+
+
+    @include mobile {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 27px;
+    }
+
+    &--acent-bg {
+        background-color: var(--color-acent);
+    }
+
+    &--dark-bg {
+        background-color: var(--color-dark);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 30px;
+
+        @include mobile {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    &__img {
+        align-self: center;
+
+        @include desktop {
+            max-width: 50% !important;
+            height: 100% !important;
+        }
+
+        @include mobile {
+            max-width: 165px !important;
+        }
+
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        @include mobile {
+            grid-column: -1/1;
+        }
+    }
+
+    &__link {
+        --serviveCardLinkIconColor: var(--color-acent);
+
+        display: inline-flex;
+        align-items: center;
+        column-gap: 15px;
+        font-size: 20px;
+
+        @include hover {
+            opacity: 0.7;
+
+        @include mobile {
+            align-self:end;
+        }
+        }
+
+        &--light {
+            --serviveCardLinkIconColor: var(--color-dark);
+            color: var(--color-light);
+
+        }
+
+        &-icon-wrapper {
+            @include flex-center;
+            @include square(41px);
+
+            background-color: currentColor;
+            border-radius: 50%;
+
+            svg {
+                color: var(--serviveCardLinkIconColor);
+            }
+        }
+
+        &-label {
+            @include mobile {
+                @include visually-hidden;
+            }
+        }
+
+    }
+}
